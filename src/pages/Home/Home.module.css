@@ -1,0 +1,81 @@
+.treinos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.table {
+    margin: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.table h2 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-content: center;
+    margin-left: 0.5em;
+
+}
+
+.treinos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.headerTable {
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.headerTable .in {
+    margin-left: 0.9em;
+}
+
+.in {
+    margin: 0em;
+    padding: 0px;
+}
+
+.addEx{
+    display: flex;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+@media (max-width: 730px) {
+    .in {
+
+    }
+
+    th, td{
+        padding: 0;
+        margin: 0;
+    }
+
+    .tableBody {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: flex-start;
+    }
+
+    .table{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tHead{
+        display: flex;
+    }
+}

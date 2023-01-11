@@ -1,0 +1,46 @@
+.header{
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background-color: #252326;
+    display: flex;
+    color: beige;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    height: 4em;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bold;
+    margin: 0;
+    padding: 1em;
+    transition: 0.2s;
+    color: white;
+}
+
+nav ul li:hover {
+    background-color: #1976d2;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+@media (max-width: 730px) {
+    nav{
+        /* width: 100vw; */
+    }
+}
