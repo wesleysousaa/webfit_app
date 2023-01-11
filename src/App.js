@@ -24,7 +24,7 @@ function App() {
       setUser(await checkToken())
     }
     check()
-  }, [])
+  },[checkToken, setUser], [])
 
   return (
     <div className="App">
