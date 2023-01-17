@@ -14,7 +14,7 @@ const useAuth = () => {
         setLoading(true)
         const { token, user } = await auth({ email, senha })
         if (token) {
-            localStorage.setItem('token', token)
+            localStorage.setItem('@Auth:token', token)
         }
 
         setLoading(false)
@@ -27,7 +27,7 @@ const useAuth = () => {
         let userAuthorizated = undefined
 
         if (token) {
-            localStorage.setItem('token', token)
+            localStorage.setItem('@Auth:token', token)
         }
 
         userAuthorizated = user
@@ -37,14 +37,14 @@ const useAuth = () => {
 
     const logOut = async () => {
         setLoading(true)
-        localStorage.removeItem('token')
+        localStorage.removeItem('@Auth:token')
         setUser(undefined)
         setLoading(false)
     }
 
     const updateUserAuth = async () => {
         setLoading(true)
-        await updateUser(localStorage.getItem('token'), user)
+        await updateUser(localStorage.getItem('@Auth:token'), user)
         setUser(user)
         setLoading(false)
     }
@@ -53,7 +53,7 @@ const useAuth = () => {
         setLoading(true)
         let u = undefined
         if (localStorage.length > 0) {
-            u = await fetchUser(localStorage.getItem('token'))
+            u = await fetchUser(localStorage.getItem('@Auth:token'))
             u = u.user
         }
         setLoading(false)

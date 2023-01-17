@@ -13,7 +13,7 @@ export const auth = async (user) => {
         }
     }).then((data) => {
         return data.json()
-    }).catch((error) => {
+    }).catch((error) => {  
         return undefined
     })
 
